@@ -1,1 +1,3 @@
-Interface funcional: Interface que implementão apenas um método. Comparator,Consumer
+Interface funcional: Interface que implementão apenas um método. Comparator,Consumer.
+Tudo feito em uma strem não afeta a lista original.
+Strem evita o problema de concorrência
