@@ -52,5 +52,12 @@ public class ArrayListEx {
 		Curso javaColecoes = new Curso("Java", "Matheus");
 		javaColecoes.addAllAula(objAulas);
 		System.out.println(javaColecoes);
+		
+		List<Aula> aulasLista = javaColecoes.getAulas();
+		System.out.println(aulasLista);
+		
+		List<Aula> aulasMutaveies = new ArrayList<>(aulasLista);
+		Collections.sort(aulasMutaveies);
+		System.out.println(javaColecoes.getTempoTotal());
 	}
 }

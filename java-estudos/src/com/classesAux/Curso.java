@@ -58,6 +58,10 @@ public class Curso {
 		this.aulas.addAll(listAulas);
 	}
 
+	public int getTempoTotal() {
+		return this.aulas.stream().mapToInt(Aula::getTempo).sum();
+	}
+
 	@Override
 	public String toString() {
 		return "Curso [nome=" + nome + ", alunos=" + alunos + ", instrutor=" + instrutor + ", aulas=" + aulas + "]";
