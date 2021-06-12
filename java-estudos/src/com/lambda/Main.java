@@ -63,6 +63,10 @@ public class Main {
 
 		Consumer<String> impressor = s -> System.out.println(s);
 		palavras.forEach(impressor);
+		
+		new Thread(()-> System.out.println("Executando uma ação")).start();
+		
+		
 	}
 
 }
