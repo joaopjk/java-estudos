@@ -1,3 +1,5 @@
 Interface funcional: Interface que implementão apenas um método. Comparator,Consumer.
 Tudo feito em uma strem não afeta a lista original.
-Strem evita o problema de concorrência
+Stream evita o problema de concorrência
+Stream e collection não são a mesma coisa.
+Optional ser para trabalharmos de maneira mais simples com verificação de null.
