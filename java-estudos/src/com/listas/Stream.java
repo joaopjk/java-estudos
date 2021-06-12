@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
 import com.classesAux.Curso;
@@ -42,6 +43,16 @@ public class Stream {
 
 		cursos.stream().filter(c -> c.getAlunos() > 10).collect(Collectors.toMap(c -> c.getNome(), d -> d.getAlunos()))
 				.forEach((nome, alunos) -> System.out.println("Curso: " + nome + " Alunos: " + alunos));
+		cursos.parallelStream().filter(c -> c.getAlunos() > 50);
+
+		cursos.stream().filter(c -> c.getAlunos() > 50).findFirst();
+		
+		OptionalDouble média = cursos.stream().mapToInt(Curso::getAlunos).average();
+		System.out.println(média);
+		
+		List<Curso> stream = cursos.stream()
+				   .filter(c -> c.getAlunos() > 50).collect(Collectors.toList());
+		System.out.println(stream);
 		
 	}
 }
