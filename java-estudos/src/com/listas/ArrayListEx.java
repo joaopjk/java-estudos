@@ -59,5 +59,9 @@ public class ArrayListEx {
 		List<Aula> aulasMutaveies = new ArrayList<>(aulasLista);
 		Collections.sort(aulasMutaveies);
 		System.out.println(javaColecoes.getTempoTotal());
+		
+		Collections.reverse(aulasLista);
+		Collections.shuffle(aulasLista);
+		//List<Type> types = new ArrayList<>(Collections.nCopies(1000, null));
 	}
 }
