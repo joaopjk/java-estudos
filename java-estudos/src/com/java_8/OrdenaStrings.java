@@ -1,3 +1,4 @@
+//Documentação: https://docs.oracle.com/javase/8/docs/api/java/util/List.html
 package com.java_8;
 
 import java.util.ArrayList;
