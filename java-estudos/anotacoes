@@ -3,3 +3,4 @@ Tudo feito em uma strem não afeta a lista original.
 Stream evita o problema de concorrência
 Stream e collection não são a mesma coisa.
 Optional ser para trabalharmos de maneira mais simples com verificação de null.
+TreeSet<>: Necessita da implementação do Comparable.

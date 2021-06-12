@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 public class Sets {
@@ -37,9 +39,16 @@ public class Sets {
 		javaColecoes.matricula(aluno1);
 		javaColecoes.matricula(aluno2);
 		javaColecoes.matricula(aluno3);
-		//javaColecoes.getAlunosSet().addAll(Arrays.asList(aluno1, aluno2, aluno3));
+		// javaColecoes.getAlunosSet().addAll(Arrays.asList(aluno1, aluno2, aluno3));
 		Set<String> alunosSincronizados = Collections.synchronizedSet(alunos);
 		System.out.println(alunosSincronizados);
+
+		List<String> letras = new LinkedList<>();
+		letras.add("A");
+		letras.add("B");
+		letras.add("C");
+
+		letras.forEach(System.out::println);
 	}
 
 }
