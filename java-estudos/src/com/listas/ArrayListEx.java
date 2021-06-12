@@ -7,6 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import com.classesAux.Aula;
+import com.classesAux.Curso;
 
 public class ArrayListEx {
 	public static void main(String[] args) {
@@ -47,5 +48,9 @@ public class ArrayListEx {
 		Collections.sort(objAulas);
 		Collections.sort(objAulas, Comparator.comparing(Aula::getTempo));
 		objAulas.sort(Comparator.comparing(Aula::getTempo));
+		
+		Curso javaColecoes = new Curso("Java", "Matheus");
+		javaColecoes.addAllAula(objAulas);
+		System.out.println(javaColecoes);
 	}
 }
