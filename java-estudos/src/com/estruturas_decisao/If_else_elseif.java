@@ -1,6 +1,6 @@
 package com.estruturas_decisao;
 
-public class Main {
+public class If_else_elseif {
 
 	public static void main(String[] args) {
 		int numero = 9;
@@ -13,4 +13,5 @@ public class Main {
 			System.out.println("Não, o número não é maior que 5. Número: " + numero);
 	}
 
+	
 }
