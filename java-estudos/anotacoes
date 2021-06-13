@@ -9,3 +9,6 @@ TreeSet<>: Necessita da implementação do Comparable.
 
 JDK: Kit de desenvolvimento Java -> JDK
 JRE:Java Runtime Environment -> JVM: Quando você cria um programa ele roda em cima do JVM.
+
+
+código font (Programa.java) -> bytecode(program.class) -> execuável
