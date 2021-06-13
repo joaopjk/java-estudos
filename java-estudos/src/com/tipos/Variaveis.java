@@ -14,7 +14,6 @@ public class Variaveis {
 		int num10 = 10;
 		int valorTotal;
 		float _valor = 34.6f;//Float precisa de declarar o f no final do valor;
-		double valor2 = 44.2;
+		double valor2 = 44.2;	
 	}
-
 }

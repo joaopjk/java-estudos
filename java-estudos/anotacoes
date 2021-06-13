@@ -12,3 +12,4 @@ JRE:Java Runtime Environment -> JVM: Quando você cria um programa ele roda em ci
 
 
 código font (Programa.java) -> bytecode(program.class) -> execuável
+programa java só é considerado programa é necessário a função main
