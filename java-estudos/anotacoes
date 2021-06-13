@@ -4,3 +4,8 @@ Stream evita o problema de concorrência
 Stream e collection não são a mesma coisa.
 Optional ser para trabalharmos de maneira mais simples com verificação de null.
 TreeSet<>: Necessita da implementação do Comparable.
+
+
+
+JDK: Kit de desenvolvimento Java -> JDK
+JRE:Java Runtime Environment -> JVM: Quando você cria um programa ele roda em cima do JVM.
