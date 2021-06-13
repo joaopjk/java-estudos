@@ -1,4 +1,4 @@
-package com.classesAux;
+package com.listas;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,6 +7,10 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+
+import com.classesAux.Aluno;
+import com.classesAux.Aula;
+import com.classesAux.Curso;
 
 public class Sets {
 

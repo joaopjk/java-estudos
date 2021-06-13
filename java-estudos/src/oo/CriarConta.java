@@ -13,6 +13,12 @@ public class CriarConta {
 		
 		Conta segundaConta = new Conta();
 		segundaConta.saldo = 50;
+		
+		Conta terceiraConta = segundaConta;
+		segundaConta.saldo += 500;
+		
+		System.out.println(segundaConta.saldo);
+		System.out.println(terceiraConta.saldo);
 	}
 
 }
