@@ -12,7 +12,7 @@ public class Conta {
 
 	public Conta(String cliente) {
 		super();
-		this.numero = contador + 1;
+		this.numero = contador;
 		this.cliente = cliente;
 		Conta.contador += 1;
 	}
