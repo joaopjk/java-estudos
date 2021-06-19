@@ -1,22 +1,36 @@
 package com.vetores_matriz;
 
+import java.util.Scanner;
 
 //São conhecidos como Array(vetores uni-dimensionais)
 public class Vetor {
+	static String frutas[];
+	static Scanner teclado = new Scanner(System.in);
 
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
-		int numeros[] = new int[5];
-		for (int i = 0; i < numeros.length; i++) {
-			numeros[i] = i + 1;
+		int qtd;
+		
+		System.out.println("Informe a quantidade de frutas para cadastrar: ");
+		qtd = Integer.parseInt(teclado.nextLine());
+		
+		cadastrarDado(qtd);
+		mostrarDados();
+		
+		teclado.close();
+	}
+	
+	static void cadastrarDado(int qtd) {
+		frutas = new String[qtd];
+		
+		for(int i = 0; i < frutas.length;i++) {
+			System.out.println("Informe a " + (1+i)+" fruta :");
+			frutas[i] = teclado.nextLine();
 		}
-
-		int numero[] = { 1, 2, 3, 4, 5 };
-		float floats[] = new float[5];
-		String nome[] = new String[4];
-
-		for (int num : numeros) {
-			System.out.println(num);
+	}
+	
+	static void mostrarDados() {
+		for(int i = frutas.length -1 ; i >= 0;i--) {
+			System.out.println(frutas[i]);
 		}
 	}
 
