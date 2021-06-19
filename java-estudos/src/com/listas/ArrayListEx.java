@@ -8,6 +8,21 @@ import java.util.List;
 
 import com.classesAux.Aula;
 import com.classesAux.Curso;
+/*
+ * Arrays (vetores /Matrizes)
+ * Um tamanho tem tamanho fixo.
+ * Um array tem tipo de dado fixo.
+ * É difícil encontrar um determinado elemente em um array.
+ * 
+ * Collections: (coleções)
+ * Java possui diversas classes/interfaces que facilitam muito o trabalho quando se trata de dados. Essas classes/interfaces
+ * são chamadas de Collections.
+ * 
+ * Listas:
+ * Aceitam repetição de valores.
+ * Possui tamanho ilimitado
+ * Caso não tem tipo definido o arraylist, aceita valores de qualquer tipo 
+ */
 
 public class ArrayListEx {
 	public static void main(String[] args) {
@@ -63,5 +78,16 @@ public class ArrayListEx {
 		Collections.reverse(aulasLista);
 		Collections.shuffle(aulasLista);
 		//List<Type> types = new ArrayList<>(Collections.nCopies(1000, null));
+		
+		//ArrayList nomes = new ArrayList();
+		//ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+		ArrayList<String> nomes = new ArrayList<String>();
+		nomes.add("João");
+		nomes.add("Maria");
+		nomes.add("Pedro");
+		
+		Collections.sort(nomes);
+		nomes.forEach(System.out::println);
+		System.out.println(nomes.get(0));
 	}
 }

@@ -12,6 +12,13 @@ import com.classesAux.Aluno;
 import com.classesAux.Aula;
 import com.classesAux.Curso;
 
+/*
+ * Os conjuntos são implementados com a interface Set (HashSet).
+ * Melhor performance
+ * Os elementos dentro de um Set não se repetem
+ * A order dos elementos não é levado em consideração
+ * Não aceita a Collections.sort();
+ */
 public class Sets {
 
 	public static void main(String[] args) {
@@ -53,6 +60,13 @@ public class Sets {
 		letras.add("C");
 
 		letras.forEach(System.out::println);
+
+		Set<String> nomes = new HashSet<String>();
+		nomes.add("João");
+		nomes.addAll(Arrays.asList("Pedro", "Paulo", "Pietro"));
+		
+		boolean foiAdicionado = nomes.add("João");
+		System.out.println(foiAdicionado);
 	}
 
 }
