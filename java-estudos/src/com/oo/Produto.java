@@ -11,10 +11,22 @@ package com.oo;
  - São as características da class/molde/modelo de dados:
  - Atributos podem ser chamados de estados.
  - Atributos são nomeados em letras minúsculas, sem espaços, sem caracteres especiais, sem acentuação
+ 
+  *Métodos
+  - Podemos enteder os métodos como a ação que realizada por um objeto da classe
+  - Os métodos são comportamentos dos objetos da classe
+  - Tipo de retorno | Nome que corresponde a ação do método | Parametros (opcionais) | Retorno
  */
 public class Produto {
 	String nome;
 	float preco;
 	float desconto;
+
+	void aumentarPreco(float valor) {
+		this.preco += valor;
+	}
 	
+	float precoAumentado(float valor) {
+		return this.preco += valor;
+	}
 }
