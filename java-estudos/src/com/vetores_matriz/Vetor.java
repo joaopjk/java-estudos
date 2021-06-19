@@ -16,6 +16,7 @@ public class Vetor {
 		cadastrarDado(qtd);
 		mostrarDados();
 
+		System.out.println("" + soma(qtd, 4));
 		teclado.close();
 	}
 
