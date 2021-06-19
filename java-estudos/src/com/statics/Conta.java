@@ -1,5 +1,10 @@
 package com.statics;
 
+/*
+Atributos estáticos são atributos, onde os valores são compartilhados entre instâncias da classe.
+
+Método estático não depende de uma instância de uma class para ser utilizado
+*/
 public class Conta {
 	private int numero;
 	private String cliente;
@@ -20,4 +25,7 @@ public class Conta {
 		return cliente;
 	}
 
+	public static int getContador() {
+		return Conta.contador;
+	}
 }
