@@ -16,4 +16,8 @@ public class Aluno extends Pessoa {
 		this.ra = ra;
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + "Aluno [ra=" + ra + "]";
+	}	
 }

@@ -16,4 +16,9 @@ public class Professor extends Pessoa {
 		this.matricula = matricula;
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + "Professor [matricula=" + matricula + "]";
+	}
+	
 }
