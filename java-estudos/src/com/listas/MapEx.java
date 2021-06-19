@@ -1,9 +1,16 @@
 package com.listas;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.classesAux.Aluno;
 import com.classesAux.Aula;
 import com.classesAux.Curso;
 
+/*
+ * A classe HashMap implementa a interface Map e trabalha com chave/valor
+ * Não aceita chaves duplicadas 
+ */
 public class MapEx {
 	public static void main(String[] args) {
 		Curso javaColecoes = new Curso("Dominando as coleções do Java", "Paulo Silveira");
@@ -19,7 +26,12 @@ public class MapEx {
 		javaColecoes.matricula(a1);
 		javaColecoes.matricula(a2);
 		javaColecoes.matricula(a3);
-		
-		//javaColecoes.buscaMatricula("");
+
+		// javaColecoes.buscaMatricula("");
+
+		Map<String, Integer> contas = new HashMap<String, Integer>();
+
+		contas.put("João", 138733);
+		contas.forEach((k, v) -> System.out.println("Key: "+k + "| Value: " + v));
 	}
 }
