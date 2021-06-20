@@ -32,7 +32,7 @@ public class Conta {
 		}
 	}
 
-	public float getSaldo() {
+	public synchronized float getSaldo() {
 		return saldo + this.limite;
 	}
 
