@@ -27,7 +27,9 @@ public class Conta {
 	}
 
 	public void depositar(float valor) {
-		this.saldo += valor;
+		synchronized (this) {
+			this.saldo += valor;
+		}
 	}
 
 	public float getSaldo() {
