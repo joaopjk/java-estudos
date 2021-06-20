@@ -1,5 +1,5 @@
 //Documentação: http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html
-package com.listas;
+package com.streams;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -46,13 +46,24 @@ public class Stream {
 		cursos.parallelStream().filter(c -> c.getAlunos() > 50);
 
 		cursos.stream().filter(c -> c.getAlunos() > 50).findFirst();
-		
+
 		OptionalDouble média = cursos.stream().mapToInt(Curso::getAlunos).average();
 		System.out.println(média);
-		
-		List<Curso> stream = cursos.stream()
-				   .filter(c -> c.getAlunos() > 50).collect(Collectors.toList());
+
+		List<Curso> stream = cursos.stream().filter(c -> c.getAlunos() > 50).collect(Collectors.toList());
 		System.out.println(stream);
-		
+
+		cursos.sort(Comparator.comparing(c -> c.getAlunos()));
+		cursos.sort(Comparator.comparing(Curso::getAlunos));
+		cursos.forEach(System.out::println);
+
+		cursos.stream().filter(c -> c.getAlunos() >= 30).forEach(System.out::println);
+		cursos.stream().filter(c -> c.getAlunos() < 50).forEach(c -> System.out.println(c.getNome()));
+		cursos.stream().filter(c -> c.getAlunos() < 50).map(Curso::getAlunos).forEach(System.out::println);
+		int soma2 = cursos.stream().filter(c -> c.getAlunos() < 50).mapToInt(Curso::getAlunos).sum();
+		System.out.println(soma2);
+		Optional<Curso> curso = cursos.stream().filter(c -> c.getAlunos() < 30).findFirst();
+		cursos.stream().filter(c -> c.getAlunos() < 30).findFirst().ifPresent(System.out::println);
+		curso.ifPresent(System.out::println);
 	}
 }
