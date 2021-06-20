@@ -45,7 +45,7 @@ public class Main {
 		Consumer<String> impressor = System.out::println;
 		palavras.forEach(impressor);
 
-		palavras.forEach(System.out::println);
+		palavras.forEach(System.out::println);//MR
 
 		Function<String, Integer> tamanho = new Function<String, Integer>() {
 			public Integer apply(String s) {
