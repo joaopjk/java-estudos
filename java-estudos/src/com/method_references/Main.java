@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+/*
+ * Methods references podem ser consideradas como simplificações das expressões lambdas
+ */
 public class Main {
 	public static void main(String[] args) {
 		List<String> palavras = new ArrayList<>();
@@ -43,5 +46,17 @@ public class Main {
 		palavras.forEach(impressor);
 
 		palavras.forEach(System.out::println);
+
+		Function<String, Integer> tamanho = new Function<String, Integer>() {
+			public Integer apply(String s) {
+				return s.length();
+			}
+		};
+
+		Comparator<String> comparadorPorTamanho = Comparator.comparing(tamanho);
+		palavras.sort(comparadorPorTamanho);
+		palavras.sort(Comparator.comparing(s -> s.length()));//Lambda
+		palavras.sort(Comparator.comparing(String::length));//MF
+
 	}
 }
