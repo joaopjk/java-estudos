@@ -5,6 +5,7 @@ import com.encapsulamento.Conta;
 
 /*
  * A classe object, faz parte do pacote java.lang
+ * java.lang.String
  */
 public class Main {
 
@@ -15,5 +16,4 @@ public class Main {
 		System.out.println(c1);
 		System.out.println(c2);
 	}
-
 }
