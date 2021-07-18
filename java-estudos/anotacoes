@@ -30,4 +30,7 @@ PascalCase
 
 Modificadores de acesso/ visibilidade
 
-public | protected | package private | private
+public: o membro é acessado por todas classes (ao menos que ele resida em um módulo diferente que não exporte o pacote onde ela está 
+protected: O membro só pode ser acessado no mesmo pacote, bem como em subclasses de paccotes diferentes
+package private | nada: o membro só pode ser acessado nas classes do mesmo pacote
+private: o membro só pode ser acessado na pró
