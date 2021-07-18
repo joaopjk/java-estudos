@@ -1,5 +1,11 @@
 package com.classesAux;
 
+/**
+ * Classe que representa um aluno.
+ * @author João Cícero Vicente Sousa
+ * @version 1.0
+ *
+ */
 public class Aluno {
 	private String nome;
 	private String numeroMatricula;
@@ -9,11 +15,18 @@ public class Aluno {
 		this.nome = nome;
 		this.numeroMatricula = numeroMatricula;
 	}
-
+	/**
+	 * 
+	 * @return Nome
+	 */
 	public String getNome() {
 		return nome;
 	}
 
+	/**
+	 * 
+	 * @param nome
+	 */
 	public void setNome(String nome) {
 		this.nome = nome;
 	}

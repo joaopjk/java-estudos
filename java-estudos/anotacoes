@@ -27,3 +27,7 @@ CamelCase
 
 PascalCase
 - Classes
+
+Modificadores de acesso/ visibilidade
+
+public | protected | package private | private
