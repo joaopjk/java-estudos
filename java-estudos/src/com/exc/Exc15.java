@@ -35,6 +35,7 @@ public class Exc15 {
 			break;
 		default:
 			dia = "inválido";
+			break;
 		}
 
 		System.out.println("O dia da semana é: " + dia);
