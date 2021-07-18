@@ -7,6 +7,12 @@ public class OperadorTernario {
 
 		numero = (valor > 0) ? valor : 7;
 		System.out.println(numero);
+
+		double preco = 34.5;
+		double desconto;
+
+		desconto = (preco < 20) ? preco * 0.1 : preco * 0.5;
+		System.out.println(desconto);
 	}
 
 }
