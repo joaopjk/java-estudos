@@ -12,3 +12,18 @@ código font (Programa.java) -> bytecode(program.class) -> execuável
 programa java só é considerado programa é necessário a função main
 
 protected : São acessíveis apenas dentro do pacote, ou visiveis em classes herdadas.
+
+Restições para nomes de variáveis
+- Não podemos começar com digito: use _
+- Não usar acentos
+- Não pode ter espaço em branco
+- Use nomes que tenham significado
+
+CamelCase
+- pacotes
+- atributos
+- metodos
+- variaveis e parametros
+
+PascalCase
+- Classes
