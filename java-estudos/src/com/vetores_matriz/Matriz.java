@@ -1,5 +1,7 @@
 package com.vetores_matriz;
 
+import java.util.Scanner;
+
 public class Matriz {
 
 	@SuppressWarnings("unused")
@@ -12,6 +14,27 @@ public class Matriz {
 				numeros[i][j] = j * i;
 			}
 		}
+
+		Scanner sc = new Scanner(System.in);
+
+		int n = Integer.parseInt(sc.nextLine());
+		int[][] matriz = new int[n][n];
+
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				matriz[i][j] = Integer.parseInt(sc.nextLine());
+			}
+		}
+
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				if (i == j) {
+					System.out.println(matriz[i][j]);
+				}
+			}
+		}
+
+		sc.close();
 	}
 
 }

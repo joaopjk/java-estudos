@@ -109,5 +109,10 @@ public class ArrayListEx {
 		numerosInteiros2.forEach(System.out::println);
 		Integer numero = numerosInteiros.stream().filter(x -> x % 2 == 0).findAny().orElse(null);
 		System.out.println(numero);
+
+		int[] numeros = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		Arrays.asList(numeros).forEach(System.out::println);
+		
+		//ArrayList com tamanho definido ArrayList lista = new ArrayList(26)
 	}
 }
