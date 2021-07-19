@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.classesAux.Aula;
 import com.classesAux.Curso;
@@ -63,34 +64,50 @@ public class ArrayListEx {
 		Collections.sort(objAulas);
 		Collections.sort(objAulas, Comparator.comparing(Aula::getTempo));
 		objAulas.sort(Comparator.comparing(Aula::getTempo));
-		
+
 		Curso javaColecoes = new Curso("Java", "Matheus");
 		javaColecoes.addAllAula(objAulas);
 		System.out.println(javaColecoes);
-		
+
 		List<Aula> aulasLista = javaColecoes.getAulas();
 		System.out.println(aulasLista);
-		
+
 		List<Aula> aulasMutaveies = new ArrayList<>(aulasLista);
 		Collections.sort(aulasMutaveies);
 		System.out.println(javaColecoes.getTempoTotal());
-		
+
 		Collections.reverse(aulasLista);
 		Collections.shuffle(aulasLista);
-		//List<Type> types = new ArrayList<>(Collections.nCopies(1000, null));
-		
-		//ArrayList nomes = new ArrayList();
-		//ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+		// List<Type> types = new ArrayList<>(Collections.nCopies(1000, null));
+
+		// ArrayList nomes = new ArrayList();
+		// ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 		ArrayList<String> nomes = new ArrayList<String>();
 		nomes.add("João");
 		nomes.add("Maria");
 		nomes.add("Pedro");
-		
+
 		Collections.sort(nomes);
 		nomes.forEach(System.out::println);
 		System.out.println(nomes.get(0));
-		
+
 //		double media = Arrays.stream(vetor).average();
 //		media.ifPresent(System.out::println);
+
+		for (Aula aula : aulasLista) {
+			System.out.println(aula.getTitulo());
+		}
+
+		List<Integer> numerosInteiros = new ArrayList<Integer>();
+		numerosInteiros.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+		numerosInteiros.add(0, 100);
+		System.out.println(numerosInteiros.size());
+		numerosInteiros.remove(1);
+		numerosInteiros.removeIf(x -> x % 2 == 0);
+		numerosInteiros.indexOf(0);
+		List<Integer> numerosInteiros2 = numerosInteiros.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
+		numerosInteiros2.forEach(System.out::println);
+		Integer numero = numerosInteiros.stream().filter(x -> x % 2 == 0).findAny().orElse(null);
+		System.out.println(numero);
 	}
 }
