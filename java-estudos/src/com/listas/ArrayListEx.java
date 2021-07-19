@@ -89,5 +89,8 @@ public class ArrayListEx {
 		Collections.sort(nomes);
 		nomes.forEach(System.out::println);
 		System.out.println(nomes.get(0));
+		
+//		double media = Arrays.stream(vetor).average();
+//		media.ifPresent(System.out::println);
 	}
 }
