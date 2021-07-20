@@ -9,6 +9,7 @@ public class TiposAlfanumericos {
 		char letra0 = (char) (letra + 1);
 		// Tipos não primitivos
 		String nome = "João Cícero Vicente Sousa";
+		Character char1 = 's';
 	}
 
 }
