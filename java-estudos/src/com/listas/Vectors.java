@@ -15,5 +15,4 @@ public class Vectors {
 		lista.remove(1);
 		lista.size();
 	}
-
 }
