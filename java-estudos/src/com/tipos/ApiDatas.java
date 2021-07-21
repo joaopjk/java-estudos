@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
@@ -64,8 +65,15 @@ public class ApiDatas {
 
 		Date x4 = new Date(1000L * 60L * 60L * 5L);
 		System.out.println(x4);
-		
-		
-	}
 
+		Date d = Date.from(Instant.parse("2021-06-25T15:42:07Z"));
+
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(d);
+		cal.add(Calendar.HOUR_OF_DAY, 4);
+		int minutes = cal.get(Calendar.MINUTE);
+		System.out.println(minutes);
+		int month = cal.get(Calendar.MONTH + 1);
+		System.out.println(month);
+	}
 }
