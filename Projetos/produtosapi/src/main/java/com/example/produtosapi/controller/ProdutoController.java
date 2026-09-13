@@ -9,7 +9,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("produtos")
 public class ProdutoController {
-    private ProdutosRepository produtoRepository;
+    private final ProdutosRepository produtoRepository;
 
     public ProdutoController(ProdutosRepository produtosRepository) {
         produtoRepository = produtosRepository;
