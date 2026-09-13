@@ -28,4 +28,9 @@ public class ProdutoController {
     public Produto BuscarPorId(@PathVariable String id) {
         return produtoRepository.findById(id).orElse(null);
     }
+
+    @DeleteMapping("/{id}")
+    public void DeleteById(@PathVariable String id) {
+        produtoRepository.deleteById(id);
+    }
 }
